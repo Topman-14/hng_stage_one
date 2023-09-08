@@ -9,7 +9,7 @@ app.get('/api', (req, res) => {
     const slack_name = req.query.slack_name;
     const track = req.query.track;
     const current_day = now.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
-    const utc_time = now.toISOString().slice(0, 19) + "Z";
+    const utc_time = now.toISOString();
     const github_file_url = "https://github.com/Topman-14/hng_stage_one/blob/main/index.js";
     const github_repo_url = "https://github.com/Topman-14/hng_stage_one";
     const status_code = 200;
@@ -33,3 +33,6 @@ app.get('/api', (req, res) => {
 app.listen(PORT, () => {
     console.log("Server listening on port: " + PORT);
 });
+
+// 2023-09-08T22:49:31.320Z
+// 2023-08-21T15:04:05Z
