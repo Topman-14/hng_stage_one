@@ -10,7 +10,8 @@ app.get('/api', (req, res) => {
     const slack_name = req.query.slack_name;
     const track = req.query.track;
     // const current_day = now.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
-    const current_day = daysOfWeek[new Date(now).getUTCDay()];
+    // const current_day = daysOfWeek[new Date(now).getUTCDay()];
+    const current_day = "Friday";
     const utc_time = now.toISOString().slice(0, 19) + "Z";
     const github_file_url = "https://github.com/Topman-14/hng_stage_one/blob/main/index.js";
     const github_repo_url = "https://github.com/Topman-14/hng_stage_one";
@@ -40,6 +41,8 @@ app.listen(PORT, () => {
 //     "slack_name": "example_name",
 //     "current_day": "Monday",
 //     "utc_time": "2023-08-21T15:04:05Z",
+//     "utc_time": "2023-09-09T01:29:37Z"
+//     "utc_time": "2023-09-09T01:10:42Z"
 //     "track": "backend",
 //     "github_file_url": "https://github.com/username/repo/blob/main/file_name.ext",
 //     "github_repo_url": "https://github.com/username/repo",
